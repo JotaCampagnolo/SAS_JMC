@@ -105,22 +105,22 @@ def decoddingFile(txt, chave):
     return l
 
 # Arquivos para a execuçao:
-textOriginal = open("in.txt",'rb').read()
-outOriginal = open("out.txt",'wb')
+textOriginal = open("in.txt", 'rb').read()
+outOriginal = open("out.txt", 'wb')
 
 # Execuçao da Entropia:
 dfrequencia = countT(textOriginal)
 dEntro = countE(dfrequencia)
-print("Entropia do Arquivo Original: ",dEntro)
+print("Entropia do Arquivo Original: ", dEntro)
 l = createNode(dfrequencia)
 j = coddingFile(textOriginal)
-x = decoddingFile(j,huffmann(l))
+x = decoddingFile(j, huffmann(l))
 outOriginal.write(j.tobytes())
 outOriginal.close()
 
-outCompact = open("outCompact.txt",'wb')
+outCompact = open("outCompact.txt", 'wb')
 outCompact.write(bytes(x))
-textCompact = open("out.txt","rb").read()
+textCompact = open("out.txt", "rb").read()
 dfrequencia = countT(textCompact)
 dEntro = countE(dfrequencia)
-print("Entropia do Arquivo Compactado: ",dEntro)
+print("Entropia do Arquivo Compactado: ", dEntro)
