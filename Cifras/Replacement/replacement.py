@@ -22,4 +22,4 @@ def Replacement(func, keyFile, fileIn, fileOut):
 
 # Main:
 Replacement('e', "key", "in.txt", "out.txt") # Encripta o texto.
-Replacement('d', "key", "out.txt", "in.txt") # Decripta o texto.
+Replacement('d', "key", "out.txt", "in2.txt") # Decripta o texto.

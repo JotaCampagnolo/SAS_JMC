@@ -16,4 +16,4 @@ def Ceaser(func, key, fileIn, fileOut):
 
 # Main:
 Ceaser('e', 1, "in.txt", "out.txt") # Encripta o texto.
-Ceaser('d', 1, "out.txt", "in.txt") # Decripta o texto.
+Ceaser('d', 1, "out.txt", "in2.txt") # Decripta o texto.
